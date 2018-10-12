@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>D.A.V. KOYLA NAGAR</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+    </head>
+    <body>
+        <div id="login_div" class="main-div">
+            <div id="floating_signin"></div>
+            <div style="text-align: center;">
+                <h2>D.A.V. PUBLIC SCHOOL</h2>
+                <h3>KOYLA NAGAR, DHANBAD</h3>
+            </div>
+            <input type="email" placeholder="Email..." id="email_field" />
+            <input type="password" placeholder="Password..." id="password_field" />
+            <button onclick="login()">Login to Account</button>
+            <br>
+            <button onclick="signup()">Sign Up</button>
+            <br>
+            <br>
+            <button class="google_login" onclick="ingoogle()">Sign in with Google</button>
+        </div>
+        </div>
+        <!-- Logged In div -->
+        <div id="user_div" class="loggedin-div">
+            <h3>Welcome User</h3>
+            <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+            <button onclick="logout()" class="logout-main">Logout</button>
+            <div id = "user_pic"></div>
+            <div style="text-align: center;">
+                <h2 class = "dav_heading">D.A.V. PUBLIC SCHOOL</h2>
+                <h3>Koyla Nagar, Dhanbad</h3>
+            </div>
+            <button class = "in-buttons-a">
+                <a class="in-buttons" href="https://www.eduqfix.com/PayDirect/#/student/rT9JHNnymZqvVKEyLsB0ELiRfzp6nnbd9YxludAJl1xhVupeAQKYG9fsup13UN89/816">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/davpublicschoolkoylanagar.appspot.com/o/fee_icon.png?alt=media&token=32fd5413-e1fa-4196-8cc2-944861702273"height="100" width="100">
+                    <br>fee payment
+                </a>
+            </button>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyADaq76okuwfat_kre6zQWInEGsIhooZ0g",
+            authDomain: "davpublicschoolkoylanagar.firebaseapp.com",
+            databaseURL: "https://davpublicschoolkoylanagar.firebaseio.com",
+            projectId: "davpublicschoolkoylanagar",
+            storageBucket: "davpublicschoolkoylanagar.appspot.com",
+            messagingSenderId: "424534763814"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="index.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+</body>
+</html>
