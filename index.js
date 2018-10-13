@@ -100,7 +100,12 @@ function ingoogle(){
     })
 }
 function signup() {
-    //sign - up function, if the button is clicked
-    window.alert("Work under Construction");
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  alert("Error signing up: Error Code - " + errorCode + "\nProblem - "+ error.message);
+  console.log(errorCode, errorMessage);
+});
 }
 
